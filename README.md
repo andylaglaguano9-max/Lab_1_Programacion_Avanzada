@@ -14,16 +14,17 @@ mvn exec:java -Dexec.mainClass=ec.edu.espe.pa.funcional.App
 
 ## Evidencias y reporte
 
-Las evidencias reproducibles se generan con:
+Las evidencias reproducibles completas se generan en Windows con:
 
-```text
-py scripts/generar_evidencias.py
-py scripts/insertar_evidencias_docx.py
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run_evidence.ps1
+py .\scripts\txt_to_png.py
 ```
 
-El informe final es `Informe_Practica_Laboratorio_Evidencias.docx`. Las capturas
-de `evidencias/capturas/` conservan la salida real de Maven, la ejecucion de
-`App`, el codigo fuente y la mutacion temporal del umbral.
+El informe final es `Informe_Practica_Laboratorio_Evidencias.docx`. Los TXT de
+`evidence/` conservan comando, hora, salida completa, código de salida y estado;
+las imágenes oscuras equivalentes quedan en `evidence/img/`. La evidencia de
+mutación conserva el fallo real y restaura el operador antes de la prueba final.
 
 El proyecto no altera la lista de entrada. La solución imperativa se conserva
 como referencia de equivalencia y la solución funcional recibe las funciones
