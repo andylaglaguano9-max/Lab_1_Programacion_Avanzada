@@ -12,20 +12,6 @@ mvn test
 mvn exec:java -Dexec.mainClass=ec.edu.espe.pa.funcional.App
 ```
 
-## Evidencias y reporte
-
-Las evidencias reproducibles completas se generan en Windows con:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\run_evidence.ps1
-py .\scripts\txt_to_png.py
-```
-
-El informe final es `Informe_Practica_Laboratorio_Evidencias.docx`. Los TXT de
-`evidence/` conservan comando, hora, salida completa, código de salida y estado;
-las imágenes oscuras equivalentes quedan en `evidence/img/`. La evidencia de
-mutación conserva el fallo real y restaura el operador antes de la prueba final.
-
 El proyecto no altera la lista de entrada. La solución imperativa se conserva
 como referencia de equivalencia y la solución funcional recibe las funciones
 como parámetros.
@@ -42,3 +28,7 @@ src/main/java/ec/edu/espe/pa/funcional/
 ├── App.java
 └── Demostracion.java
 ```
+
+Las pruebas unitarias se encuentran en `src/test/java` y validan las reglas,
+la equivalencia entre las implementaciones y la conservación de los datos
+originales.

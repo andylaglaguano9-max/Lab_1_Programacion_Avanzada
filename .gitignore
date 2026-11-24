@@ -3,6 +3,9 @@ target/
 *.iml
 *.class
 out/
-evidencias/render/
-Informe_Practica_Laboratorio_Completado.docx
+evidence/
+evidencias/
+scripts/
+*.docx
+*.pdf
 ~$*.docx
